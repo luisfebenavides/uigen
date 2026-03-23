@@ -19,6 +19,14 @@ jobs:
       issues: write
       id-token: write
     steps:
+      - uses: actions/checkout@v4
+
+      - name: Project Setup
+        run: |
+          npm install
+
       - uses: anthropics/claude-code-action@beta
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          custom_instructions: |
+            El proyecto es uigen, un generador de UI. Revisa el código siguiendo buenas prácticas de React y TypeScript. El servidor corre en localhost:3000
