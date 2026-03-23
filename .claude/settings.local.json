@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx vitest:*)",
+      "Bash(claude mcp:*)",
+      "Bash(notepad:*)",
+      "mcp__playwright",
+      "Bash(winget install:*)"
+    ]
+  }
+}
